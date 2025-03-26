@@ -282,7 +282,7 @@ export default function Home() {
                 role: "Event Manager",
                 imageUrl: "/team/dia.jpeg",
                 linkedinUrl: "https://www.linkedin.com/in/dia-ahuja-112/",
-              }
+              },
               {
                 name: "Yuvraj Katyal",
                 role: "Photographer",
