@@ -63,8 +63,8 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center relative"> {/* Added relative here */}
-        <div className="md:w-1/2 pr-8 z-10"> {/* Added z-10 here */}
+      <section className="container mx-auto px-4 py-16 flex flex-col md:flex-row md:justify-center items-center relative">
+        <div className="md:w-1/2 pr-8 z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Uncharted Terrains
           </h1>
@@ -84,7 +84,7 @@ export default function Home() {
             Buy Tickets
           </Link>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center absolute md:relative top-0 left-0 w-full md:w-auto"> {/* Added absolute and md:relative here */}
+        <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center absolute md:relative top-0 left-0 w-full md:w-auto md:right-[-50px]">
           <div className="relative w-80 h-80">
             <Image
               src="/Vector.svg?height=320&width=320"
@@ -100,9 +100,10 @@ export default function Home() {
       {/* About Us Section */}
       <section id="about" className="container mx-auto px-4 py-8">
         <h2 className="text-3xl font-bold mb-12 text-center">About us</h2>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2">
-            <p className="text-gray-300 mb-4">
+        <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
+          {/* Modified the text content div */}
+          <div className="md:w-1/2 pr-8 z-10"> {/* Added md:pl-8 */}
+            <p className="text-gray-300 mb-8 max-w-xl">
               In the spirit of discovering and spreading ideas, TEDx is a
               program of local, self-organized events that bring people
               together to share a TED-like experience. At a TEDx event, TED
@@ -110,13 +111,13 @@ export default function Home() {
               and connection. These local, self-organized events are branded
               TEDx, where x = independently organized TED event.
             </p>
-            <p className="text-gray-300">
+            <p className="text-gray-300 mb-8 max-w-xl">
               The TED Conference provides general guidance for the TEDx program,
               but individual TEDx events are self-organized. (Subject to
               certain rules and regulations.)
             </p>
           </div>
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center absolute md:relative top-0 left-0 w-full md:w-auto md:right-[-50px]">
             <div className="rounded-xl overflow-hidden border border-red-600 w-[300px] h-[300px]">
               <Image
                 src="/about.png?height=300&width=300"
@@ -237,16 +238,14 @@ export default function Home() {
       <section id="team" className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center">Team</h2>
 
-        {/* Added flex justify-center to the parent container */}
         <div className="flex justify-center">
-          {/* Removed justify-center from the grid container */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
               {
                 name: "Sadhya Kalra",
                 role: "Lead Organiser",
-                imageUrl: "/team/sadhya.jpeg", // Add image URL here
-                linkedinUrl: "https://www.linkedin.com/in/sadhya-kalra-123/", // Add LinkedIn URL here
+                imageUrl: "/team/sadhya.jpeg",
+                linkedinUrl: "https://www.linkedin.com/in/sadhya-kalra-123/",
               },
               {
                 name: "Shreyansh Sahu",
@@ -313,18 +312,18 @@ export default function Home() {
                 <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
                   <div className="mb-2 overflow-hidden">
                     <Image
-                      src={member.imageUrl} // Use the member's image URL
+                      src={member.imageUrl}
                       alt={member.name}
                       width={150}
                       height={200}
-                      className="object-cover w-full h-auto hover:opacity-80 transition-opacity" // Added hover effect
+                      className="object-cover w-full h-auto hover:opacity-80 transition-opacity"
                     />
                   </div>
                 </a>
                 <h3 className="font-medium text-center">{member.name}</h3>
                 <p className="text-red-600 text-xs text-center">{member.role}</p>
                 <a
-                  href={member.linkedinUrl} // Use the member's LinkedIn URL
+                  href={member.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 bg-blue-600 rounded-full p-1.5"
@@ -336,7 +335,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <footer className="bg-black border-t border-gray-800 py-8">
