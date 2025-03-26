@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Major (Dr.) Mohd Ali Shah",
+      "role": "Army Veteran, Actor, Motivational Speaker",
+      "description": "Maj (Dr.) Md Ali Shah (Veteran) is a distinguished defense and strategic expert, awarded the Eastern Army Commander's and Director General Assam Rifles Commendation Cards for his contributions to Northeast India. He led the Assam Rifles contingent at the 2008 Republic Day Parade and is a former detective and 'Mr. Pune Talent 1999.' An IIM graduate as well, he is a visiting faculty at Whistling Woods International and has trained under legends like Naseeruddin Shah and Om Puri. As an award-winning actor, he has appeared in acclaimed films such as Haider, Bajrangi Bhaijaan, and Tashkent Files.",
+      "imageUrl": "/ali.jpeg?height=300&width=300"
+    },
+    {
+      "name": "Dinesh Mohan",
+      "role": "Model, Actor",
+      "description": "At 63, Dinesh Mohan has redefined success in modeling and acting, starting his career at 57 in 2016. He has appeared in top fashion campaigns for Vogue, GQ, and leading designers, walking as a showstopper at major fashion weeks, including Amazon India Fashion Week and Kerala Fashion League.Recognized with the Pride of Nation Award and Gem of India Award for his inspiring journey, Dinesh has been featured in Hindustan Times, Times of India, and The Hindu. He has also judged top modeling contests and is a sought-after motivational speaker, delivering talks at TEDx, Josh Talks, and other platforms.",
+      "imageUrl": "/dm.png?height=300&width=300"
+    },
+    {
+      "name": "Vineet Malhotra",
+      "role": "Journalist",
+      "description": "With over two decades in mainstream media, Vineet Malhotra is a seasoned journalist and prime-time debate host. He began his career in sports broadcasting, covering major global events like the IPL (Season 1), Commonwealth Games, Olympics, and the ICC World Cups (2011, 2015, 2019). Vineet has held key editorial roles as Executive Editor at Times Now, Zee News, and TIRANGA TV, while also serving as a prime-time host for Times Now, NDTV, Zee News, and NewsX. His expertise extends beyond journalism to marketing and public awareness, having anchored major national events, including Lok Sabha elections and historic sporting spectacles.",
+      "imageUrl": "/vm.png?height=300&width=300"
+    },
+    {
+      "name": "Navin Gulia",
+      "role": "Social Activist",
+      "description": "Was declared permanently disabled after an army accident at the age of 22. Since then, he has been an advocate for disabled rights and has also appeared on the popular TV show, ‘Kaun Banega Crorepati’. He also made it to the Limca Book of Records by becoming the first & only person to drive from Delhi to Marsimik La, the highest motorable pass in the world, driving nonstop for 55 hours in 2004. Was awarded the prestigious ‘National Role Model Award’ from Dr Abdul Kalam in 2007,  the ‘Global Indian Award’ by Times Of India in 2005, ‘Karamveer Puruskar’ from iCongo in 2011 & ‘CNN-IBN Real Heroes Award’ in 2012.",
+      "imageUrl": "/ng.png?height=300&width=300"
+    },
+    {
+      "name": "Jainesh Sinha",
+      "role": "Co Founder and COO GyanDhan",
+      "description": "Mr Jainesh Sinha, the Co-founder and COO of GyanDhan is a driven individual with a passion for data. As an IIT Delhi graduate and a Super 30 alumni, he spent over 5 years in a credit strategy role at the prestigious Capital One, a top ten US bank. With over 15+ years of experience, he continues to build his role as a global leader in the field of financial services through his motto ‘disrupt the education financing sector in India for good’. Jainesh is also the face of Videshi Chai, a passion project that covers the A-Z of overseas studies.",
+      "imageUrl": "/js.png?height=300&width=300"
+    }
+  ]
