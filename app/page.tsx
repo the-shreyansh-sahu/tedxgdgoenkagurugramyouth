@@ -63,8 +63,8 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 pr-8">
+      <section className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center relative"> {/* Added relative here */}
+        <div className="md:w-1/2 pr-8 z-10"> {/* Added z-10 here */}
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Uncharted Terrains
           </h1>
@@ -84,7 +84,7 @@ export default function Home() {
             Buy Tickets
           </Link>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center absolute md:relative top-0 left-0 w-full md:w-auto"> {/* Added absolute and md:relative here */}
           <div className="relative w-80 h-80">
             <Image
               src="/Vector.svg?height=320&width=320"
