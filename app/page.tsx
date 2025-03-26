@@ -87,7 +87,7 @@ export default function Home() {
         <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
           <div className="relative w-80 h-80">
             <Image
-              src="/vector.svg?height=320&width=320"
+              src="/Vector.svg?height=320&width=320"
               alt="Red spiral animation"
               width={320}
               height={320}
@@ -136,7 +136,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white rounded-lg p-4 flex items-center justify-center">
             <Image
-              src="/gd.png?height=100&width=150"
+              src="/GD.png?height=100&width=150"
               alt="GyanDhan"
               width={150}
               height={100}
