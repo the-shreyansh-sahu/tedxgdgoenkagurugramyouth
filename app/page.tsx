@@ -251,7 +251,7 @@ export default function Home() {
                 name: "Shreyansh Sahu",
                 role: "Tech Director",
                 imageUrl: "/team/shreyansh.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/shreyansh-sahu-456/",
+                linkedinUrl: "https://www.linkedin.com/in/the-shreyansh-sahu/",
               },
               {
                 name: "Vivaan Bafna",
