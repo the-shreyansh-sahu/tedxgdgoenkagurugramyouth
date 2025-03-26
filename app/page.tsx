@@ -117,7 +117,7 @@ export default function Home() {
               certain rules and regulations.)
             </p>
           </div>
-          <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center absolute md:relative top-0 left-0 w-full md:w-auto md:right-[-50px]">
+          <div className="md:w-1/2 flex justify-center">
             <div className="rounded-xl overflow-hidden border border-red-600 w-[300px] h-[300px]">
               <Image
                 src="/about.png?height=300&width=300"
@@ -251,7 +251,7 @@ export default function Home() {
                 name: "Shreyansh Sahu",
                 role: "Tech Director",
                 imageUrl: "/team/shreyansh.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/shreyansh-sahu-456/",
+                linkedinUrl: "https://www.linkedin.com/in/the-shreyansh-sahu/",
               },
               {
                 name: "Kanishka Karwa",
