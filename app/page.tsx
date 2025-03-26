@@ -254,6 +254,12 @@ export default function Home() {
                 linkedinUrl: "https://www.linkedin.com/in/shreyansh-sahu-456/",
               },
               {
+                name: "Kanishka Karwa",
+                role: "Guest Manager",
+                imageUrl: "/team/kanishka.jpeg",
+                linkedinUrl: "https://www.linkedin.com/in/kanishka-karwa-141/",
+              },
+              {
                 name: "Vivaan Bafna",
                 role: "Executive Producer",
                 imageUrl: "/team/vivaan.jpeg",
@@ -266,23 +272,17 @@ export default function Home() {
                 linkedinUrl: "https://www.linkedin.com/in/srida-padha-101/",
               },
               {
-                name: "Dia Ahuja",
-                role: "Event Manager",
-                imageUrl: "/team/dia.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/dia-ahuja-112/",
-              },
-              {
                 name: "Siddhant Sharma",
                 role: "Design Head",
                 imageUrl: "/team/siddhant.jpeg",
                 linkedinUrl: "https://www.linkedin.com/in/siddhant-sharma-131/",
               },
               {
-                name: "Kanishka Karwa",
-                role: "Guest Manager",
-                imageUrl: "/team/kanishka.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/kanishka-karwa-141/",
-              },
+                name: "Dia Ahuja",
+                role: "Event Manager",
+                imageUrl: "/team/dia.jpeg",
+                linkedinUrl: "https://www.linkedin.com/in/dia-ahuja-112/",
+              }
               {
                 name: "Yuvraj Katyal",
                 role: "Photographer",
