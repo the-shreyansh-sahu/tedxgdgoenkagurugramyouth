@@ -245,7 +245,6 @@ export default function Home() {
                 name: "Sadhya Kalra",
                 role: "Lead Organiser",
                 imageUrl: "/team/sadhya.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/sadhya-kalra-123/",
               },
               {
                 name: "Shreyansh Sahu",
@@ -256,56 +255,47 @@ export default function Home() {
               {
                 name: "Kanishka Karwa",
                 role: "Guest Manager",
-                imageUrl: "/team/kanishka.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/kanishka-karwa-141/",
+                imageUrl: "/team/kanishka.jpg",
               },
               {
                 name: "Vivaan Bafna",
                 role: "Executive Producer",
                 imageUrl: "/team/vivaan.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/vivaan-bafna-789/",
               },
               {
                 name: "Srida Padha",
                 role: "Curator",
                 imageUrl: "/team/srida.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/srida-padha-101/",
               },
               {
                 name: "Siddhant Sharma",
                 role: "Design Head",
                 imageUrl: "/team/siddhant.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/siddhant-sharma-131/",
               },
               {
-                name: "Dia Ahuja",
+                name: "Dia Ahooja",
                 role: "Event Manager",
                 imageUrl: "/team/dia.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/dia-ahuja-112/",
               },
               {
                 name: "Yuvraj Katyal",
                 role: "Photographer",
                 imageUrl: "/team/yuvraj.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/yuvraj-katyal-151/",
               },
               {
                 name: "Jas Manocha",
                 role: "Production Team",
                 imageUrl: "/team/jas.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/jas-manocha-161/",
               },
               {
                 name: "Shivesh Arora",
                 role: "Production Team",
                 imageUrl: "/team/shivesh.jpeg",
-                linkedinUrl: "https://www.linkedin.com/in/shivesh-arora-171/",
               },
               {
                 name: "D. Sharad",
                 role: "Photographer",
                 imageUrl: "placeholder.svg",
-                linkedinUrl: "https://www.linkedin.com/in/d-sharad-181/",
               },
             ].map((member, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -322,14 +312,6 @@ export default function Home() {
                 </a>
                 <h3 className="font-medium text-center">{member.name}</h3>
                 <p className="text-red-600 text-xs text-center">{member.role}</p>
-                <a
-                  href={member.linkedinUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 bg-blue-600 rounded-full p-1.5"
-                >
-                  <Linkedin className="h-4 w-4 text-white" />
-                </a>
               </div>
             ))}
           </div>
