@@ -295,7 +295,7 @@ export default function Home() {
               {
                 name: "D. Sharad",
                 role: "Photographer",
-                imageUrl: "placeholder.svg",
+                imageUrl: "/team/sharad.jpeg",
               },
             ].map((member, index) => (
               <div key={index} className="flex flex-col items-center">
