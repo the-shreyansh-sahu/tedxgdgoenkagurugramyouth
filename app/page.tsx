@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Instagram, Linkedin } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Instagram,
+  Linkedin,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import speakersData from "./speakers.json";
 
@@ -13,8 +19,38 @@ interface Speaker {
   imageUrl: string;
 }
 
+interface Sponsor {
+  name: string;
+  imageUrl: string;
+  websiteUrl: string;
+}
+
+const sponsorsData: Sponsor[] = [
+  {
+    name: "GyanDhan",
+    imageUrl: "/GD.png",
+    websiteUrl: "https://www.gyandhan.com/",
+  },
+  {
+    name: "Startup Buddy",
+    imageUrl: "/sb.png",
+    websiteUrl: "https://www.startupbuddy.co.in/",
+  },
+  {
+    name: "Atlas Skilltech University",
+    imageUrl: "/Atlas-Skilltech-University.jpg",
+    websiteUrl: "https://atlasuniversity.edu.in/",
+  },
+  {
+    name: "KEDGE Business School",
+    imageUrl: "/KBS.png",
+    websiteUrl: "https://www.kedge.edu/",
+  },
+];
+
 export default function Home() {
   const [currentSpeakerIndex, setCurrentSpeakerIndex] = useState(0);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const handlePrevSpeaker = () => {
     setCurrentSpeakerIndex((prevIndex) =>
@@ -30,6 +66,14 @@ export default function Home() {
 
   const handleDotClick = (index: number) => {
     setCurrentSpeakerIndex(index);
+  };
+
+  const openContactModal = () => {
+    setIsContactModalOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
   };
 
   const currentSpeaker = speakersData[currentSpeakerIndex];
@@ -59,8 +103,42 @@ export default function Home() {
           <Link href="#team" className="hover:text-red-600 transition-colors">
             Team
           </Link>
+          <button
+            onClick={openContactModal}
+            className="hover:text-red-600 transition-colors"
+          >
+            Contact Us
+          </button>
         </nav>
       </header>
+
+      {/* Contact Us Modal */}
+      {isContactModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="bg-black p-8 rounded-lg shadow-lg relative animate-scale-in border border-red-600">
+            <button
+              onClick={closeContactModal}
+              className="absolute top-2 right-2 text-white hover:text-red-600 transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <h3 className="text-2xl font-bold mb-4 text-center text-red-600">
+              Contact Us
+            </h3>
+            <div className="space-y-2">
+              <p className="text-gray-300">
+                Email: tedxgdgps.48youth@gmail.com
+              </p>
+              <p className="text-gray-300">
+                Phone 1: +91 80760 47987
+              </p>
+              <p className="text-gray-300">
+                Phone 2: +91 88605 40353
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 flex flex-col md:flex-row md:justify-center items-center relative">
@@ -102,7 +180,9 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-12 text-center">About us</h2>
         <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
           {/* Modified the text content div */}
-          <div className="md:w-1/2 pr-8 z-10"> {/* Added md:pl-8 */}
+          <div className="md:w-1/2 pr-8 z-10">
+            {" "}
+            {/* Added md:pl-8 */}
             <p className="text-gray-300 mb-8 max-w-xl">
               In the spirit of discovering and spreading ideas, TEDx is a
               program of local, self-organized events that bring people
@@ -135,42 +215,23 @@ export default function Home() {
       <section id="sponsors" className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center">Sponsors</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white rounded-lg p-4 flex items-center justify-center">
-            <Image
-              src="/GD.png?height=100&width=150"
-              alt="GyanDhan"
-              width={150}
-              height={100}
-              className="object-contain"
-            />
-          </div>
-          <div className="bg-white rounded-lg p-4 flex items-center justify-center">
-            <Image
-              src="/sb.png?height=100&width=150"
-              alt="Startup Buddy"
-              width={150}
-              height={100}
-              className="object-contain"
-            />
-          </div>
-          <div className="bg-white rounded-lg p-4 flex items-center justify-center">
-            <Image
-              src="/Atlas-Skilltech-University.jpg?height=100&width=150"
-              alt="Atlas Skilltech University"
-              width={150}
-              height={100}
-              className="object-contain"
-            />
-          </div>
-          <div className="bg-white rounded-lg p-4 flex items-center justify-center">
-            <Image
-              src="/KBS.png?height=100&width=150"
-              alt="KEDGE Business School"
-              width={150}
-              height={100}
-              className="object-contain"
-            />
-          </div>
+          {sponsorsData.map((sponsor, index) => (
+            <a
+              key={index}
+              href={sponsor.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-lg p-4 flex items-center justify-center hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src={`${sponsor.imageUrl}?height=100&width=150`}
+                alt={sponsor.name}
+                width={150}
+                height={100}
+                className="object-contain"
+              />
+            </a>
+          ))}
         </div>
       </section>
 
@@ -299,7 +360,11 @@ export default function Home() {
               },
             ].map((member, index) => (
               <div key={index} className="flex flex-col items-center">
-                <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={member.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="mb-2 overflow-hidden">
                     <Image
                       src={member.imageUrl}
@@ -311,7 +376,9 @@ export default function Home() {
                   </div>
                 </a>
                 <h3 className="font-medium text-center">{member.name}</h3>
-                <p className="text-red-600 text-xs text-center">{member.role}</p>
+                <p className="text-red-600 text-xs text-center">
+                  {member.role}
+                </p>
               </div>
             ))}
           </div>
@@ -341,9 +408,9 @@ export default function Home() {
               <p className="text-sm text-gray-400">
                 tedxgdgps.48youth@gmail.com
                 <br />
-                +919876543789
+                +91 80760 47987
                 <br />
-                +918865430953
+                +91 88605 40353
               </p>
             </div>
           </div>
