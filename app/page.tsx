@@ -9,7 +9,7 @@ import {
   Linkedin,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import speakersData from "./speakers.json";
 
 interface Speaker {
@@ -51,6 +51,41 @@ const sponsorsData: Sponsor[] = [
 export default function Home() {
   const [currentSpeakerIndex, setCurrentSpeakerIndex] = useState(0);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  // Set the target date and time to April 19, 2025, 8:30 AM
+  const targetDate = new Date("2025-04-19T08:30:00").getTime();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference < 0) {
+        clearInterval(interval);
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (difference % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setCountdown({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handlePrevSpeaker = () => {
     setCurrentSpeakerIndex((prevIndex) =>
@@ -172,6 +207,20 @@ export default function Home() {
               className="object-contain"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Countdown Section */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-6">Event Countdown</h2>
+          <div className="flex justify-center gap-6 mb-4">
+            <CountdownItem label="Days" value={countdown.days} />
+            <CountdownItem label="Hours" value={countdown.hours} />
+            <CountdownItem label="Minutes" value={countdown.minutes} />
+            <CountdownItem label="Seconds" value={countdown.seconds} />
+          </div>
+          <p className="text-gray-300">19th April 2025, 8:30 AM</p>
         </div>
       </section>
 
@@ -419,3 +468,19 @@ export default function Home() {
     </main>
   );
 }
+
+interface CountdownItemProps {
+  label: string;
+  value: number;
+}
+
+const CountdownItem: React.FC<CountdownItemProps> = ({ label, value }) => {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="text-4xl font-bold text-red-600 animate-pulse">
+        {value.toString().padStart(2, "0")}
+      </div>
+      <div className="text-sm text-gray-300">{label}</div>
+    </div>
+  );
+};
