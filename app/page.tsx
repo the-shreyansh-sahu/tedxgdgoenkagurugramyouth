@@ -359,7 +359,7 @@ export default function Home() {
               },
               {
                 name: "Shreyansh Sahu",
-                role: "Tech Director",
+                role: "Technical Director",
                 imageUrl: "/team/shreyansh.jpeg",
                 linkedinUrl: "https://www.linkedin.com/in/the-shreyansh-sahu/",
               },
