@@ -190,14 +190,13 @@ export default function Home() {
             invitation to step into the unfamiliar, to question, to discover,
             and to redefine what's possible — one story at a time.
           </p>
-          {/* Buy Tickets Button
+          {/* Buy Tickets Button */}
           <Link
             href="#tickets"
             className="inline-block border border-red-600 text-white px-8 py-3 rounded-full hover:bg-red-600/10 transition-colors"
           >
             Buy Tickets
-          </Link> 
-          */}
+          </Link>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center absolute md:relative top-0 left-0 w-full md:w-auto md:right-[-50px]">
           <div className="relative w-80 h-80">
