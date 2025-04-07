@@ -192,7 +192,7 @@ export default function Home() {
           </p>
           {/* Buy Tickets Button */}
           <Link
-            href="https://forms.gle/RAo8EAQ1uBEsf8SW8"
+            href="https://forms.gle/hH7NBQjXAXu7AuZH9"
             className="inline-block border border-red-600 text-white px-8 py-3 rounded-full hover:bg-red-600/10 transition-colors"
           >
             Buy Tickets
