@@ -32,6 +32,11 @@ const sponsorsData: Sponsor[] = [
     websiteUrl: "https://www.gyandhan.com/",
   },
   {
+    name: "KEDGE Business School",
+    imageUrl: "/KBS.png",
+    websiteUrl: "https://www.kedge.edu/",
+  },
+  {
     name: "Startup Buddy",
     imageUrl: "/sb.png",
     websiteUrl: "https://www.startupbuddy.co.in/",
@@ -40,11 +45,6 @@ const sponsorsData: Sponsor[] = [
     name: "Atlas Skilltech University",
     imageUrl: "/Atlas-Skilltech-University.jpg",
     websiteUrl: "https://atlasuniversity.edu.in/",
-  },
-  {
-    name: "KEDGE Business School",
-    imageUrl: "/KBS.png",
-    websiteUrl: "https://www.kedge.edu/",
   },
 ];
 
